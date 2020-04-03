@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>COVID-19 kenya stats</title>
+{% endblock %}
+
+{% block body %}
+<h1> COVID-19 INFECTION IN KENYA</h1>
+<h1>total Cases</h1>  
+<div>{{stats.cases}}</div>
+<h1>today Cases</h1>  
+<div>{{stats.todayCases}}</div>
+<h1>Total Deaths</h1>  
+<div>{{stats.deaths}}</div>
+<h1>today Deaths</h1>  
+<div>{{stats.todayDeaths}}</div>
+<h1>Total Recovered</h1>  
+<div>{{stats.recovered}}</div>
+<h1>Active Cases</h1>  
+<div>{{stats.active}}</div>
+<h1>Critical Cases</h1>  
+<div>{{stats.critical}}</div>
+<h1>Cases Per One Million</h1>  
+<div>{{stats.casesPerOneMillion}}</div>
+<h1>deaths Per One Million</h1>
+<div>{{stats.deathsPerOneMillion}}</div>
+<h1>Updated on</h1>
+<div>{{stats.updated}}</div>
+{% endblock %}
