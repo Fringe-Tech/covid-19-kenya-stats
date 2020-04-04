@@ -2,7 +2,7 @@ absl-py==0.7.1
 alabaster==0.7.12
 #alembic==0.9.3.dev0
 appdirs==1.4.3
-apturl==0.5.2
+#apturl==0.5.2
 asn1crypto==0.24.0
 astor==0.8.0
 astroid==2.2.5
