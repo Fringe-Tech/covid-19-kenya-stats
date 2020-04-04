@@ -12,5 +12,10 @@ def index():
   return render_template('index.html', stats=json.loads(r.text))
   print("stats data: ", r.text)
 
+
+now = datetime.now()
+now = datetime.utcnow()
+print(now)
+
 if __name__ == "__main__":
     app.run(debug=True)   

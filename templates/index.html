@@ -5,39 +5,261 @@
 {% endblock %}
 
 {% block body %}
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand">COVID-19 INFECTION IN KENYA</a>
-</nav>
-<table class="table table-striped table-dark">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Total Cases</th>
-            <th scope="col">Today Cases</th>
-            <th scope="col">Total Deaths</th>
-            <th>Today Deaths</th>
-            <th>Total Recovered</th>
-            <th>Active Cases</th>
-            <th>Critical Cases</th>
-            <th>Cases Per One Million</th>
-            <th>Deaths Per One Million</th>
-            <th>Updated on</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>{{stats.cases}}</td>
-            <td>{{stats.todayCases}}</td>
-            <td>{{stats.deaths}}</td>
-            <td>{{stats.todayDeaths}}</td>
-            <td>{{stats.recovered}}</td>
-            <td>{{stats.active}}</td>
-            <td>{{stats.critical}}</td>>
-            <td>{{stats.casesPerOneMillion}}</td>
-            <td>{{stats.deathsPerOneMillion}}</td>
-            <td>{{stats.updated}}</td>
-        </tr>
-    </tbody>
-</table>
+
+<div class="row">
+
+    <!-- Total cases -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Cases</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.cases}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total recovery -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total recovery</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.recovered}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Total Deaths -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">total deaths</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.deaths}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active cases -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">active cases</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.active}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Today cases -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Today Cases</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.todayCases}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Today deaths -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Today deaths</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.todayDeaths}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cases per one million -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">cases Per One Million</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.casesPerOneMillion}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Critical cases -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">critical cases</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.critical}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+
+    <!-- Deaths Per One Million -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Deaths Per One Million</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.deathsPerOneMillion}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- total -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total statistics</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.deathsPerOneMillion + stats.critical + stats.casesPerOneMillion + stats.todayDeaths + stats.todayCases + stats.active + stats.deaths + stats.recovered + stats.cases }}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- deaths per million % -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{stats.deathsPerOneMillion}}%</div>
+                            </div>
+                            <div class="col">
+                                <div class="progress progress-sm mr-2">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 1%"
+                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- updated on -->
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">updated on</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.updated}}</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project Card Example -->
+<!-- <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+    </div>
+    <div class="card-body">
+        <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
+        <div class="progress mb-4">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
+        <div class="progress mb-4">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
+        <div class="progress mb-4">
+            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
+        <div class="progress mb-4">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+</div> -->
+<p>{{now}}</p>
+{% endblock %}
+{%block footer %}
+<!-- #footer -->
 {% endblock %}
