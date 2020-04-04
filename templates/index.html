@@ -187,7 +187,7 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">deaths Per One Million</div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
                                 <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{stats.deathsPerOneMillion}}%</div>
@@ -214,8 +214,14 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">updated on</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.updated}}</div>
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">current date</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"><p id="demo"></p>
+                        
+                        <script>
+                            var d = new Date();
+                            document.getElementById("demo").innerHTML = d;
+                        </script>
+</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -258,7 +264,7 @@
         </div>
     </div>
 </div> -->
-<p>{{now}}</p>
+
 {% endblock %}
 {%block footer %}
 <!-- #footer -->

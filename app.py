@@ -15,7 +15,7 @@ def index():
 
 now = datetime.now()
 now = datetime.utcnow()
-print(now)
+
 
 if __name__ == "__main__":
     app.run(debug=True)   
