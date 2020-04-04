@@ -5,25 +5,39 @@
 {% endblock %}
 
 {% block body %}
-<h1> COVID-19 INFECTION IN KENYA</h1>
-<h1>total Cases</h1>  
-<div>{{stats.cases}}</div>
-<h1>today Cases</h1>  
-<div>{{stats.todayCases}}</div>
-<h1>Total Deaths</h1>  
-<div>{{stats.deaths}}</div>
-<h1>today Deaths</h1>  
-<div>{{stats.todayDeaths}}</div>
-<h1>Total Recovered</h1>  
-<div>{{stats.recovered}}</div>
-<h1>Active Cases</h1>  
-<div>{{stats.active}}</div>
-<h1>Critical Cases</h1>  
-<div>{{stats.critical}}</div>
-<h1>Cases Per One Million</h1>  
-<div>{{stats.casesPerOneMillion}}</div>
-<h1>deaths Per One Million</h1>
-<div>{{stats.deathsPerOneMillion}}</div>
-<h1>Updated on</h1>
-<div>{{stats.updated}}</div>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">COVID-19 INFECTION IN KENYA</a>
+</nav>
+<table class="table table-striped table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Total Cases</th>
+            <th scope="col">today Cases</th>
+            <th scope="col">Total Deaths</th>
+            <th>today Deaths</th>
+            <th>Total Recovered</th>
+            <th>Active Cases</th>
+            <th>Critical Cases</th>
+            <th>Cases Per One Million</th>
+            <th>deaths Per One Million</th>
+            <th>Updated on</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>{{stats.cases}}</td>
+            <td>{{stats.todayCases}}</td>
+            <td>{{stats.deaths}}</td>
+            <td>{{stats.todayDeaths}}</td>
+            <td>{{stats.recovered}}</td>
+            <td>{{stats.active}}</td>
+            <td>{{stats.critical}}</td>>
+            <td>{{stats.casesPerOneMillion}}</td>
+            <td>{{stats.deathsPerOneMillion}}</td>
+            <td>{{stats.updated}}</td>
+        </tr>
+    </tbody>
+</table>
 {% endblock %}
