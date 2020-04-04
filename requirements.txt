@@ -238,5 +238,3 @@ xkit==0.0.0
 youtube-dl==2019.12.25
 zipp==3.1.0
 zope.interface==4.3.2
-[requires]
-python_version = "3.6"
