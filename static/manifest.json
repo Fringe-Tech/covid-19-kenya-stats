@@ -14,7 +14,7 @@
     "prefer_related_applications": false,
     "icons": [
        {
-           "src": "static/images/favicon.png",
+           "src": "static/images/icon-192x192.png",
            "type": "image/png",
            "sizes": "192x192"
        }, {
@@ -22,7 +22,7 @@
            "type": "image/png",
            "sizes": "500x500"
        }, {
-           "src": "static/images/favicon.png",
+           "src": "static/images/icon-512x512.png",
            "type": "image/png",
            "sizes": "512x512"
        }
