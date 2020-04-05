@@ -22,7 +22,7 @@
            "type": "image/png",
            "sizes": "500x500"
        }, {
-           "src": "/static/images/favicon.png",
+           "src": "static/images/favicon.png",
            "type": "image/png",
            "sizes": "512x512"
        }
