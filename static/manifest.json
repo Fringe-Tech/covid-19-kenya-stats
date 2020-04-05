@@ -8,17 +8,23 @@
     "short_name": "COVID-19 kenya ",
     "theme_color": "#545B60",
     "description": "covid-19 infection statistics for Kenya",
-    "orientation": "portrait",
-    "background_color": "transparent",
+    "orientation": "any",
+    "background_color": "#545B60",
     "related_applications": [],
     "prefer_related_applications": false,
     "icons": [
        {
-           "src": "/images/favicon.png",
+           "src": "static/images/favicon.png",
+           "type": "image/png",
            "sizes": "192x192"
        }, {
-           "src": "/images/apple-touch-icon.png",
+           "src": "static/images/apple-touch-icon.png",
+           "type": "image/png",
            "sizes": "500x500"
+       }, {
+           "src": "/static/images/favicon.png",
+           "type": "image/png",
+           "sizes": "512x512"
        }
     ],
     "screenshots": [],
