@@ -6,10 +6,10 @@
   "display": "standalone",
   "start_url": "https://covid19-ke-stats.herokuapp.com/",
   "short_name": "COVID-19 kenya ",
-  "theme_color": "#545B60",
+  "theme_color": "#343A40",
   "description": "covid-19 infection statistics for Kenya",
   "orientation": "any",
-  "background_color": "#545B60",
+  "background_color": "#343A40",
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [
