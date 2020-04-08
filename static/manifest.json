@@ -1,32 +1,34 @@
 {
-    "dir": "ltr",
-    "lang": "English",
-    "name": "COVID-19 kenya stats",
-    "scope": "/",
-    "display": "standalone",
-    "start_url": "https://covid19-ke-stats.herokuapp.com/",
-    "short_name": "COVID-19 kenya ",
-    "theme_color": "#545B60",
-    "description": "covid-19 infection statistics for Kenya",
-    "orientation": "any",
-    "background_color": "#545B60",
-    "related_applications": [],
-    "prefer_related_applications": false,
-    "icons": [
-       {
-           "src": "static/images/icon-192x192.png",
-           "type": "image/png",
-           "sizes": "192x192"
-       }, {
-           "src": "static/images/apple-touch-icon.png",
-           "type": "image/png",
-           "sizes": "500x500"
-       }, {
-           "src": "static/images/icon-512x512.png",
-           "type": "image/png",
-           "sizes": "512x512"
-       }
-    ],
-    "screenshots": [],
-    "generated": "true"
+  "dir": "ltr",
+  "lang": "English",
+  "name": "COVID-19 kenya stats",
+  "scope": "./",
+  "display": "standalone",
+  "start_url": "https://covid19-ke-stats.herokuapp.com/",
+  "short_name": "COVID-19 kenya ",
+  "theme_color": "#545B60",
+  "description": "covid-19 infection statistics for Kenya",
+  "orientation": "any",
+  "background_color": "#545B60",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "{{ url_for('static', filename='images/icon-192x192.png') }}",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "{{ url_for('static', filename='images/apple-touch-icon.png') }}",
+      "type": "image/png",
+      "sizes": "500x500"
+    },
+    {
+      "src": "{{ url_for('static', filename='images/icon-512x512.png') }}",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "screenshots": [],
+  "generated": "true"
 }

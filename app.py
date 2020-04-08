@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
+app._static_folder = ''
 @app.route('/')
 def index():
   r = requests.get('https://corona.lmao.ninja/countries/kenya')
