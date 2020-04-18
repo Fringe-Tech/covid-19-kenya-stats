@@ -19,6 +19,21 @@ def index():
   print("stats data: ", r.text)
 
 
+@app.route('/about')
+def About():
+  return render_template('about.html')
+
+
+@app.route('/global')
+def Global():
+  return render_template('global.html')
+
+
+@app.route('/contact')
+def Contact():
+  return render_template('contact.html')
+
+
 now = datetime.now()
 now = datetime.utcnow()
 

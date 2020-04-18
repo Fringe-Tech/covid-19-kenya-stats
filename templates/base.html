@@ -16,9 +16,29 @@
 {% block head %}{% endblock %}
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand">COVID-19 INFECTION IN KENYA</a>
-</nav>
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">COVID-19 INFECTION IN KENYA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('Global')}}">Global</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('About')}}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('Contact')}}">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
 {% block body %}{% endblock %}
 <body/>
 <footer class="sticky-footer bg-inverse">

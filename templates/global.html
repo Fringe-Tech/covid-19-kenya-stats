@@ -182,30 +182,29 @@
     </div>
 
     <!-- deaths per million % -->
-     <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">deaths Per One Million</div>
-                      <div class="row no-gutters align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{stats.deathsPerOneMillion}}%</div>
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tests Per One Million</div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-auto">
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{stats.testsPerOneMillion}}</div>
+                            </div>
                         </div>
-                        <div class="col">
-                          <div class="progress progress-sm mr-2">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total tests</div>
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{stats.tests}}</div>
+                            </div>
+                    <div class="col-auto">
+                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
+        </div>
+    </div>
 
     <!-- updated on -->
     <div class="col-xl-3 col-md-6 mb-4">
@@ -220,80 +219,10 @@
                             var d = new Date();
                             document.getElementById("demo").innerHTML = d;
                         </script>
-                    </div>
+</div>
                     </div>
                     <div class="col-auto">
                         <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-
-    <!-- Total Tests -->
-    <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-primary shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Total tests</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.tests}}</div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-stethoscope fa-3x" aria-hidden="true" style="color:red;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Total test per million -->
-    <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-success shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">TESTS PER ONE MILLION</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.testsPerOneMillion}}</div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-user-md fa-3x" aria-hidden="true" style="color:green;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Continent -->
-    <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-info shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Continent</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{stats.continent}}</div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-globe fa-3x" aria-hidden="true" style="color:red;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Country -->
-    <div class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-left-warning shadow h-100 py-2">
-            <div class="card-body">
-                <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">country</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">Kenya</div>
-                    </div>
-                    <div class="col-auto">
-                        <i class="fa fa-globe fa-3x" aria-hidden="true" style="color:#F9C404;"></i>
                     </div>
                 </div>
             </div>
