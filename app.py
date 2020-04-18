@@ -16,17 +16,17 @@ app.logger.setLevel(logging.ERROR)
 def index():
   r = requests.get('https://corona.lmao.ninja/v2/countries/kenya')
   return render_template('index.html', stats=json.loads(r.text))
-  print("stats data: ", r.text)
+
+
+@app.route('/global')
+def Global():
+    g = requests.get('https://corona.lmao.ninja/v2/all')
+    return render_template('global.html', globe=json.loads(g.text))
 
 
 @app.route('/about')
 def About():
   return render_template('about.html')
-
-
-@app.route('/global')
-def Global():
-  return render_template('global.html')
 
 
 @app.route('/contact')
@@ -46,7 +46,6 @@ def offline():
 @app.route('/sw.js')
 def sw():
     return app.send_static_file('sw.js')
-
 
 
 if __name__ == "__main__":
